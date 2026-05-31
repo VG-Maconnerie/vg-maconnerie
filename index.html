@@ -18,9 +18,10 @@
         <a href="#expertises">Expertises</a>
         <a href="#deroulement">Déroulement</a>
         <a href="#realisations">Réalisations</a>
-        <a href="#publications">Publications</a>
+        <a href="#appel-offre">Appels d'offres</a>
         <a href="#contact">Contact</a>
       </div>
+      <button class="btn-pro" onclick="ouvrirBatiIA()">🔒 Accès Professionnel</button>
       <a class="btn btn-primary" href="tel:0622190959">Appeler</a>
     </nav>
   </header>
@@ -85,6 +86,32 @@
       </div>
     </div>
   </section>
+
+  <section class="partenaires">
+    <h2>Partenaires & Fournisseurs</h2>
+
+    <div class="slider">
+        <div class="slide-track">
+
+            <img src="./img/f-01.png">
+            <img src="./img/f-02.png">
+            <img src="./img/f-03.png">
+            <img src="./img/f-04.png">
+            <img src="./img/f-05.png">
+            <img src="./img/f-06.png">
+
+            <!-- duplication pour boucle infinie -->
+
+            <img src="./img/f-07.png">
+            <img src="./img/f-08.png">
+            <img src="./img/f-09.png">
+            <img src="./img/f-10.png">
+            <img src="./img/f-11.png">
+            <img src="./img/f-12.png">
+
+        </div>
+    </div>
+</section>
 
   <section id="realisations" class="section alt reveal">
     <div class="container">
@@ -159,7 +186,75 @@
     </div>
   </section>
 
-  <section id="publications" class="section alt reveal">
+<section id="appel-offre" class="appel-offre">
+
+<h2>📋 Appels d'Offres & Consultation Chantier</h2>
+
+<p>
+Vous avez un projet de construction, rénovation, clôture, terrassement ou maçonnerie ?<br>
+Déposez votre dossier pour étude.
+</p>
+
+<form action="https://formsubmit.co/vg-maconnerie@outlook.fr" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="societe" placeholder="Société ou particulier" required>
+
+<input type="text" name="contact" placeholder="Nom du contact" required>
+
+<input type="tel" name="telephone" placeholder="Téléphone">
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="text" name="adresse" placeholder="Adresse du chantier">
+
+<select name="chantier">
+    <option>Clôture</option>
+    <option>Dallage</option>
+    <option>Terrassement</option>
+    <option>Maçonnerie générale</option>
+    <option>Extension</option>
+    <option>Mur de soutènement</option>
+    <option>Rénovation</option>
+</select>
+
+<input type="number" name="budget" placeholder="Budget estimatif €">
+
+<input type="date" name="date">
+
+<textarea name="description"
+placeholder="Description du projet"></textarea>
+
+<label><strong>Plans PDF</strong></label>
+<input type="file" name="plans">
+
+<label><strong>Photos chantier</strong></label>
+<input type="file" name="photos" multiple>
+
+<button type="submit">
+Déposer mon dossier
+</button>
+
+</form>
+
+<div class="batiia-info">
+
+<h3>🤖 Analyse Chantier Assistée par la Technologie IA.<br>Votre première entreprise Française dans le monde du numérique.</h3>
+
+<div class="batiia-liste">
+
+✅ Analyse des plans<br>
+✅ Préparation chantier<br>
+✅ Identification des risques<br>
+✅ Estimation matériaux<br>
+✅ Prévision durée chantier<br>
+✅ Préparation devis technique
+
+</div>
+
+</div>
+</section>
+
+<section id="publications" class="section alt reveal">
     <div class="container">
       <div class="portfolio">
         <div class="work big"><img src="./img/img_pub_100.png" alt="VG Maçonnerie | Grégory Viaud" /></div>
@@ -170,7 +265,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section">
+<section id="contact" class="section">
     <div class="container">
       <div class="quote">
         <div>
@@ -184,7 +279,7 @@
           <p><strong>Facebook :</strong> Grégory Viaud</p>
           <p><strong>SIRET :</strong> 94433443200019</p>
           <p><strong>Activité :</strong> Maçonnerie générale, neuf & rénovation</p>
-          <form class="contact-form" action="https://formsubmit.co/vg-maconnerie@outlook.fr" method="POST">
+          <form class="contact-form" action="https://formsubmit.co/ton-email-a-remplacer@example.com" method="POST">
             <input type="text" name="nom" placeholder="Votre nom" required>
             <input type="tel" name="telephone" placeholder="Votre téléphone" required>
             <select name="type-projet">
@@ -220,6 +315,24 @@
   </footer>
 
   <a class="float-whatsapp" href="https://wa.me/33622190959" target="_blank" aria-label="Contacter VG Maçonnerie sur WhatsApp">☎</a>
+
+  <script>
+function ouvrirBatiIA(){
+
+  const mdp = prompt("Mot de passe BATI-IA");
+
+  if(mdp === "Greg2026!"){
+
+     window.location.href =
+     "https://vg-maconnerie.github.io/bati-ia/";
+
+  } else {
+
+     alert("Accès refusé");
+
+  }
+}
+</script>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
