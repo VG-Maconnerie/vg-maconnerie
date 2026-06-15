@@ -808,3 +808,117 @@
     padding:15px 30px;
     text-decoration:none;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* SECTION PRINCIPALE ULTRA LIGHT */
+.attentions-clients {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 30px;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+  /* HAUTEUR CONTRÔLÉE */
+  min-height: 620px;
+  max-height: 620px;
+}
+
+/* IMAGE PLUS DISCRÈTE */
+.attentions-image {
+  flex: 0.45;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.attentions-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* évite l'effet “plein écran” */
+  max-height: 620px;
+  transform: scale(1.02);
+}
+
+/* TEXTE PLUS PRIORITAIRE */
+.attentions-content {
+  flex: 0.55;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.attentions-content h2 {
+  font-size: 35px;
+  color: #1455c8;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+/* LISTE */
+.liste-avantages {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.liste-avantages li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  padding-left: 6px;
+}
+
+/* BOUTON */
+.btn-avantages {
+  display: inline-block;
+  width: fit-content;
+
+  padding: 10px 16px;
+  border-radius: 8px;
+
+  background: #2c7be5;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.btn-avantages:hover {
+  background: #1f5fc2;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .attentions-clients {
+    flex-direction: column;
+    max-height: none;
+    min-height: auto;
+  }
+
+  .attentions-image {
+    width: 100%;
+    height: 220px;
+  }
+}
