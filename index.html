@@ -31,23 +31,59 @@
   <title>VG Maçonnerie - Grégory Viaud</title>
 </head>
 <body>
-  <header class="topbar">
-    <nav class="nav">
-      <a class="brand" href="#accueil">
-        <span class="brand-logo"></span>
-        <span>VG MAÇONNERIE<br><small>Grégory Viaud</small></span>
-      </a>
-      <div class="nav-links">
-        <a href="#expertises">Expertises</a>
-        <a href="#deroulement">Déroulement</a>
-        <a href="#realisations">Réalisations</a>
-        <a href="#appel-offre">Appels d'offres</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="btn-pro" onclick="ouvrirBatiIA()">🔒 Accès Professionnel</button>
+  
+   
+  <header class="header">
+
+  <div class="logo">
+  <a href="#"><img src="./img/logo.png" alt="VG Maçonnerie logo" class="logo-img"></a>
+  <span><a href="#">VG Maçonnerie<br><span2 class="titre">Grégory Viaud</a></span2></span>
+</div>
+
+  <nav class="nav">
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="burger">☰</label>
+
+    <ul class="menu">
+
+      <li class="dropdown">
+        <a href="#">Notre savoir faire ▾</a>
+        <ul class="submenu">
+          <li><a href="#expertises">Expertises</a></li>
+          <li><a href="#deroulement">Déroulement</a></li>
+          <li><a href="#livre-blanc">Livre blanc 2026</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Les ouvrages ▾</a>
+        <ul class="submenu">
+          <li><a href="#epoxy-home">Surface Epoxy (New)</a></li>
+          <li><a href="#realisations">Réalisations</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#appel-offre">Appels d'Offres</a></li>
+      <li><a href="#publications">Publications</a></li> 
+
+      <li class="dropdown">
+        <a href="#">Nous contacter ▾</a>
+        <ul class="submenu">
+          <li><a href="#avis">Avis Clients</a></li>
+          <li><a href="#goodies">Goodies Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+
+    <button class="btn-pro" onclick="ouvrirBatiIA()">🔒 Accès Professionnel</button>
       <a class="btn btn-primary" href="tel:0622190959">Appeler</a>
-    </nav>
-  </header>
+
+  </nav>
+
+</header>
 
   <main id="accueil" class="hero">
     <div class="hero-inner">
@@ -136,9 +172,41 @@
     </div>
 </section>
 
-<!-- SECTION SOL EPOXY -->
+<section id="livre-blanc" class="livre-blanc"></section>
 
-<section class="epoxy-home">
+    <div class="container">
+
+        <h2>📘 Livre Blanc VG Maçonnerie 2026</h2>
+
+        <p class="intro">
+            Découvrez notre vision de la maçonnerie moderne, nos réalisations,
+            notre méthodologie BÂTI-IA™ et nos solutions d'accompagnement
+            pour les particuliers et les professionnels.
+        </p>
+
+        <div class="video-container">
+            <video controls preload="metadata" poster="./img/couverture-livre-blanc.png" alt="Livre blanc VG Maçonnerie">
+                <source src="./img/LIVRE-BLANC-2026.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+        </div>
+
+        <div class="actions">
+
+            <a href="./doc/LIVRE-BLANC-VG-2026.pdf"
+               class="btn-pdf"
+               target="_blank">
+               📄 Télécharger le Livre Blanc PDF
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SECTION SOL EPOXY -->
+<section id="epoxy-home" class="epoxy-home">
     <div class="container">
 
         <div class="epoxy-grid">
@@ -197,39 +265,6 @@
     </div>
 </section>
 
-<section class="livre-blanc">
-
-    <div class="container">
-
-        <h1>📘 Livre Blanc VG Maçonnerie 2026</h1>
-
-        <p class="intro">
-            Découvrez notre vision de la maçonnerie moderne, nos réalisations,
-            notre méthodologie BÂTI-IA™ et nos solutions d'accompagnement
-            pour les particuliers et les professionnels.
-        </p>
-
-        <div class="video-container">
-            <video controls preload="metadata" poster="./img/couverture-livre-blanc.png" alt="Livre blanc VG Maçonnerie">
-                <source src="./img/LIVRE-BLANC-2026.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-        </div>
-
-        <div class="actions">
-
-            <a href="./doc/LIVRE-BLANC-VG-2026.pdf"
-               class="btn-pdf"
-               target="_blank">
-               📄 Télécharger le Livre Blanc PDF
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
   <section id="realisations" class="section alt reveal">
     <div class="container">
       <div class="section-title">
@@ -285,20 +320,6 @@
              📞 06 22 19 09 59<br>
              📍 VG Maçonnerie | Grégory Viaud</p>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="avis" class="section reveal">
-    <div class="container">
-      <div class="section-title">
-        <h2>Avis clients</h2>
-        <p>Zone prévue pour intégrer les vrais avis Google ou les retours clients validés par Grégory.</p>
-      </div>
-      <div class="reviews-grid">
-        <article class="review-card"><div class="stars">★★★★★</div><p>Travail sérieux, chantier propre et résultat conforme aux attentes.</p><strong>Client rénovation</strong></article>
-        <article class="review-card"><div class="stars">★★★★★</div><p>Bon conseil, réalisation soignée et accompagnement clair du début à la fin.</p><strong>Client toiture</strong></article>
-        <article class="review-card"><div class="stars">★★★★★</div><p>Artisan réactif, précis et disponible pour expliquer les étapes du chantier.</p><strong>Client aménagement</strong></article>
       </div>
     </div>
   </section>
@@ -377,33 +398,62 @@ Déposer mon dossier
     </div>
   </section>
 
-  <section class="attentions-clients">
+  <section id="avis" class="section reveal">
+    <div class="container">
+      <div class="section-title">
+        <h2>Avis clients</h2>
+        <p>Zone prévue pour intégrer les vrais avis Google ou les retours clients validés par Grégory.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card"><div class="stars">★★★★★</div><p>Travail sérieux, chantier propre et résultat conforme aux attentes.</p><strong>Client rénovation</strong></article>
+        <article class="review-card"><div class="stars">★★★★★</div><p>Bon conseil, réalisation soignée et accompagnement clair du début à la fin.</p><strong>Client toiture</strong></article>
+        <article class="review-card"><div class="stars">★★★★★</div><p>Artisan réactif, précis et disponible pour expliquer les étapes du chantier.</p><strong>Client aménagement</strong></article>
+      </div>
+    </div>
+  </section>
 
-  <div class="attentions-image">
-    <img src="./img/vg-maconnerie-goodies.png" alt="Attentions clients VG Maçonnerie">
-  </div>
 
-  <div class="attentions-content">
+  <!-- SECTION GOODIES-->
+<section id="goodies" class="attentions-clients">
+    <div class="container">
 
-    <h2>Nos Goodies VG-Maçonnerie, pour nos clients</h2>
+        <div class="epoxy-grid">
 
-    <p class="intro">
-      Chez VG Maçonnerie, nous remercions nos clients pour leur confiance avec des attentions personnalisées selon les projets.
+            <div class="epoxy-image">
+                <img src="./img/vg-maconnerie-goodies.png" alt="Attentions clients VG Maçonnerie">
+            </div>
+
+            <div class="epoxy-content">
+
+                <span class="epoxy-badge">
+                    🚀 Goodies
+                </span>
+
+                <h2>
+                    Notre satisfaction pour nos clients
+                </h2>
+
+                <p class="intro">
+                     Chez VG Maçonnerie, nous remercions nos clients pour leur confiance avec des attentions personnalisées selon les projets.
     </p>
+                </p>
 
-    <ul class="liste-avantages">
-      <li>✓ Cadeaux personnalisés selon le chantier</li>
-      <li>✓ Programme de parrainage</li>
-      <li>✓ Coffrets de remerciement sur certains projets</li>
-      <li>✓ Suivi client privilégié après travaux</li>
-    </ul>
+                <ul class="liste-avantages">
+                 <li>✅ Cadeaux personnalisés selon le chantier</li>
+                 <li>✅ Programme de parrainage</li>
+                 <li>✅ Coffrets de remerciement sur certains projets</li>
+                 <li>✅ Suivi client privilégié après travaux</li>
+               </ul>
 
-    <a href="#contact" class="btn-avantages">
-      Découvrir nos avantages
-    </a>
+               <a href="#contact" class="btn-avantages">
+                Découvrir nos avantages
+              </a>
 
-  </div>
+            </div>
 
+        </div>
+
+    </div>
 </section>
 
 <section id="contact" class="section">
