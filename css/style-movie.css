@@ -1,0 +1,163 @@
+/* BODY */
+
+body{
+    background:#000c24;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    padding:0px;
+}
+
+/* TITRE */
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h1{
+    font-size:42px;
+    color:#e8b244;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.title p{
+    color:#ffffff;
+    font-size:18px;
+}
+
+.color {
+    color:#ffffff;
+}
+
+/* GRID */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+/* CARD */
+
+.video-card{
+    background:#111827;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease;
+}
+
+.video-card:hover{
+    transform:translateY(-6px);
+
+    border:1px solid rgba(96,165,250,0.3);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    0 0 25px rgba(96,165,250,0.2);
+}
+
+/* VIDEO */
+
+.video-card video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    cursor:pointer;
+
+    transition:transform 0.4s ease;
+}
+
+.video-card:hover video{
+    transform:scale(1.03);
+}
+
+/* CONTENT */
+
+.video-content{
+    padding:20px;
+}
+
+.video-content h3{
+    font-size:20px;
+    margin-bottom:10px;
+    color:white;
+}
+
+.video-content p{
+    font-size:14px;
+    line-height:1.6;
+    color:#94a3b8;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#60a5fa;
+    border-radius:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .title h1{
+        font-size:30px;
+    }
+
+    .video-card video{
+        height:200px;
+    }
+
+}
+
+.video-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.92);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    padding:30px;
+}
+
+.video-modal.active{
+    display:flex;
+}
+
+.video-modal video{
+    width:90%;
+    max-width:1200px;
+    max-height:85vh;
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(96,165,250,0.4);
+}
+
+.close-video{
+    position:absolute;
+    top:25px;
+    right:40px;
+    font-size:50px;
+    color:white;
+    cursor:pointer;
+    z-index:100000;
+}

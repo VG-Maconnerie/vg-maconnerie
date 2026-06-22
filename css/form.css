@@ -1,0 +1,141 @@
+/* HEADER */
+
+.contact-header{
+    background:#06264a;
+    color:#fff;
+    text-align:center;
+    padding:100px 0;
+}
+
+.contact-header h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.contact-header p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* SECTION CONTACT */
+
+.contact-section{
+    padding:80px 0;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:50px;
+}
+
+/* INFOS */
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-card{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.info-card h3{
+    color:#06264a;
+    margin-bottom:10px;
+}
+
+/* FORMULAIRE */
+
+.contact-form{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.contact-form h2{
+    color:#06264a;
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#f4b400;
+}
+
+/* BOUTON */
+
+.btn-contact{
+    display:inline-block;
+    background:#f4b400;
+    color:#06264a;
+    padding:14px 30px;
+    border:none;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-contact:hover{
+    transform:translateY(-3px);
+}
+
+/* CTA */
+
+.contact-cta{
+    background:#06264a;
+    color:#fff;
+    text-align:center;
+    padding:90px 0;
+}
+
+.contact-cta h2{
+    margin-bottom:20px;
+}
+
+.contact-cta p{
+    max-width:700px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-header h1{
+        font-size:2.2rem;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+}

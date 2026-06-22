@@ -284,34 +284,66 @@
     .step h3 { margin: 22px 0 10px; font-size: 19px; }
     .step p { margin: 0; line-height: 1.45; font-size: 14px; opacity: .92; }
 
-    .portfolio {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      gap: 16px;
-    }
 
-    .work {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      min-height: 250px;
-      background: #ddd;
-      box-shadow: 0 12px 30px rgba(6,23,43,.09);
-    }
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
 
-    .work.big { grid-row: span 2; min-height: 520px; }
-    .work img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-    .work span {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      background: rgba(6,38,74,.92);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 900;
-      font-size: 14px;
-    }
+.work {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 500px; /* même hauteur pour les 3 */
+    background: #ddd;
+    box-shadow: 0 12px 30px rgba(6,23,43,.09);
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work span {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    background: rgba(6,38,74,.92);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 14px;
+}
+.work img{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.work img:hover{
+    transform:scale(1.03);
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90vh;
+    border-radius:12px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
 
     .quote {
       background: linear-gradient(135deg, var(--navy), #071a34);
@@ -966,7 +998,7 @@
 .menu li a {
   color: #000;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 13px;
   opacity: 0.9;
   transition: 0.2s;
   font-weight: 700;
@@ -990,7 +1022,7 @@
   background: #f1f1f1;
   list-style: none;
 
-  min-width: 190px;
+  min-width: 220px;
 
   display: none;
   flex-direction: column;
@@ -1004,12 +1036,12 @@
 .submenu li a {
   display: block;
   padding: 10px 12px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .dropdown:hover .submenu {
-  display: flex;
+  display: flex;color: 
 }
 
 /* BURGER MOBILE */
@@ -1082,8 +1114,8 @@
 
 /* mini logo */
 .logo-img {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   border-radius: 4px; /* optionnel, style plus doux */
 }
@@ -1094,3 +1126,379 @@
   background: rgba(100, 100, 100, 0.52);
   margin: 6px 10px;
 }
+
+/* ==========================
+   CONTENEUR
+========================== */
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.page-header{
+    padding:100px 0 70px;
+    text-align:center;
+    background:#f7f9fc;
+}
+
+.page-header h1{
+    font-size:3rem;
+    color:#06264a;
+    margin-bottom:15px;
+}
+
+.page-header p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+/* ==========================
+   VALEURS
+========================== */
+
+.values-section{
+    padding:80px 0;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+}
+
+.value-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.value-card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.value-card h3{
+    color:#06264a;
+    margin-bottom:15px;
+}
+
+.value-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* ==========================
+   ENGAGEMENT
+========================== */
+
+.commitment{
+    background:#06264a;
+    color:#fff;
+    text-align:center;
+    padding:90px 0;
+}
+
+.commitment h2{
+    font-size:2.2rem;
+    margin-bottom:20px;
+}
+
+.commitment p{
+    max-width:800px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+.btn-primary{
+    display:inline-block;
+    background:#f4b400;
+    color:#06264a;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   TABLETTE
+========================== */
+
+@media (max-width:992px){
+
+    .values-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .page-header h1{
+        font-size:2.2rem;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ==========================
+   HISTOIRE
+========================== */
+
+.story-section{
+    padding:80px 0;
+}
+
+.story-intro{
+    max-width:900px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+.story-intro h2{
+    color:#06264a;
+    margin-bottom:20px;
+}
+
+.story-intro p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-bottom:80px;
+}
+
+.timeline-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.timeline-card:hover{
+    transform:translateY(-8px);
+}
+
+.year{
+    background:#06264a;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.timeline-content{
+    padding:30px;
+}
+
+.timeline-content h3{
+    color:#06264a;
+    margin-bottom:15px;
+}
+
+.timeline-content p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* ==========================
+   VISION
+========================== */
+
+.vision-box{
+    background:#f7f9fc;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.vision-box h2{
+    color:#06264a;
+    margin-bottom:20px;
+}
+
+.vision-box p{
+    max-width:800px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.history-cta{
+    background:#06264a;
+    color:#fff;
+    text-align:center;
+    padding:90px 0;
+}
+
+.history-cta h2{
+    margin-bottom:20px;
+}
+
+.history-cta p{
+    max-width:800px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .timeline{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .story-intro{
+        text-align:left;
+    }
+
+    .vision-box{
+        padding:30px;
+    }
+
+}
+
+.services-page{
+    padding:80px 0;
+}
+
+.services-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.services-header h1{
+    font-size:3rem;
+    color:#06264a;
+    margin-bottom:15px;
+}
+
+.services-header p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+.services-nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:60px;
+    position:sticky;
+    top:90px;
+    z-index:10;
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.services-nav a{
+    text-decoration:none;
+    color:#06264a;
+    background:#f5f7fa;
+    padding:12px 20px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.services-nav a:hover{
+    background:#06264a;
+    color:#fff;
+}
+
+.service-block{
+    background:#fff;
+    padding:50px;
+    margin-bottom:30px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    /* Décalage pour les ancres */
+    scroll-margin-top:140px;
+}
+
+.service-block h2{
+    color:#06264a;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.service-block p{
+    color:#666;
+    line-height:1.8;
+    max-width:900px;
+}
+
+/* Scroll fluide */
+html{
+    scroll-behavior:smooth;
+}
+
+@media(max-width:768px){
+
+    .services-nav{
+        position:relative;
+        top:auto;
+    }
+
+    .service-block{
+        padding:30px;
+    }
+
+    .services-header h1{
+        font-size:2.2rem;
+    }
+
+}
+
